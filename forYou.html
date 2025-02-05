@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For You, My Love</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(to bottom, #1e3c72, #2a5298);
+            font-family: 'Poppins', sans-serif;
+            flex-direction: column;
+            text-align: center;
+            color: white;
+        }
+        .message {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+        .bouquet {
+            position: relative;
+            width: 100px;
+            height: 150px;
+        }
+        .flower {
+            position: absolute;
+            width: 30px;
+            height: 30px;
+            background: radial-gradient(circle, #4a90e2 40%, #1e3c72 90%);
+            border-radius: 50%;
+        }
+        .flower::before,
+        .flower::after {
+            content: "";
+            position: absolute;
+            width: 30px;
+            height: 30px;
+            background: radial-gradient(circle, #4a90e2 40%, #1e3c72 90%);
+            border-radius: 50%;
+        }
+        .flower::before {
+            transform: rotate(45deg);
+        }
+        .flower::after {
+            transform: rotate(-45deg);
+        }
+        .flower:nth-child(1) { top: 0; left: 35px; }
+        .flower:nth-child(2) { top: 20px; left: 5px; }
+        .flower:nth-child(3) { top: 20px; left: 65px; }
+        .flower:nth-child(4) { top: 40px; left: 20px; }
+        .flower:nth-child(5) { top: 40px; left: 50px; }
+        .stem {
+            position: absolute;
+            bottom: 0;
+            left: 45px;
+            width: 10px;
+            height: 100px;
+            background: green;
+            border-radius: 5px;
+        }
+        .leaves {
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background: green;
+            border-radius: 50%;
+        }
+        .leaves:nth-child(1) { top: 60px; left: 30px; transform: rotate(30deg); }
+        .leaves:nth-child(2) { top: 60px; left: 60px; transform: rotate(-30deg); }
+    </style>
+</head>
+<body>
+    <div class="message">For you, my love 💙</div>
+    <div class="bouquet">
+        <div class="flower"></div>
+        <div class="flower"></div>
+        <div class="flower"></div>
+        <div class="flower"></div>
+        <div class="flower"></div>
+        <div class="stem"></div>
+        <div class="leaves"></div>
+        <div class="leaves"></div>
+    </div>
+</body>
+</html>
